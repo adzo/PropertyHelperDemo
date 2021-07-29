@@ -45,7 +45,7 @@ namespace TsiExtentionsV40.Helpers.Internal
 
         #region IEnumerable<TEntity>
  
-        public IEnumerable<TEntity> GetFromRawSql(string query, List<SqlParameter> parameters = null, string connectionString)
+        public IEnumerable<TEntity> GetFromRawSql(string query, string connectionString)
         {
             foreach (var reader in SqlHelper.ReadData(query, parameters, connectionString))
             {
